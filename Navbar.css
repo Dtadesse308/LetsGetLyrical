@@ -1,0 +1,75 @@
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh; /* This will control your navbar height */
+    border: black solid 1px;
+}
+
+.logo {
+    background-image:  linear-gradient(45deg, pink , mediumpurple);
+    color: transparent;
+    background-clip: text;
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.Logout_button {
+    border: 4px solid transparent; /* Creates space for the gradient border */
+    border-image: linear-gradient(45deg, pink , mediumpurple);
+    border-image-slice: 1;
+    background-color: white; /* Inner background */
+    font-size: 16px;
+    padding:2px;
+    color: black;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.Logout_button:hover {
+    background: linear-gradient(45deg, pink , mediumpurple);
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 20px;
+    font-family: "Roboto Thin", sans-serif;
+    text-decoration: none;
+    color: black;
+    /*padding: 8px 25px;*/
+    transition: all .5s ease;
+    display: inline-block;
+    position: relative;
+}
+
+/* hover effect */
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-links a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
